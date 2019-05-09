@@ -1,14 +1,9 @@
 # varnish-5.2.1-configuration
-Cấu hình mẫu cho Varnish 5.2.1
+## Cấu hình mẫu cho Varnish 5.2.1
 
 Môi trường:
-CentOS Linux release 7.6.1810 (Core)
+CentOS Linux release 7.6.1810 (Core) <br />
 Kernel: 3.10.0-957.12.1
-
-Cấu hình:
-
-2 x 2.6 Ghz CPU
-3GB RAM
 
 Thiết lập Server:
 + Nginx trên cổng 80 và 443 - Static và xử lý TLS/SSL
@@ -18,17 +13,17 @@ Thiết lập Server:
 
 Cấu hình này được tách thành rất nhiều file nhỏ tùy theo mỗi website khác nhau. Nếu không có nhu cầu có thể gộp lại
 
-Restart/ Reload lại Varnish sau khi thực hiện thay đổi và đảm bảo Varnish chạy trước khi test
+Restart/ Reload lại Varnish sau khi thực hiện thay đổi và đảm bảo Varnish chạy trước khi test.
 Để kiểm tra sau varnish hoạt động (có HIT) hay không, kiểm tra header xem:
 
-Age: 0
-X-Cache: MISS
+Age: 0 <br />
+X-Cache: MISS <br />
 X-Cache-Hits: 0
 
 Có chuyển thành 
 
-Age: [x]
-X-Cache: HIT
+Age: [x] <br />
+X-Cache: HIT <br />
 X-Cache-Hits: 1
 
 Sau mỗi lần request và số hit có tăng thêm không
